@@ -52,14 +52,14 @@
     
     
     float width = 260.0;
-    float height = 190.0;
+    float height = 210.0;
     UIView *alertView = [[UIView alloc] initWithFrame:CGRectMake((self.view.frame.size.width/2)-(width/2), (self.view.frame.size.height/2)-(height/2), width, height)];
     alertView.backgroundColor = [UIColor colorWithRed:228.0/255.0 green:228.0/255.0 blue:228.0/255.0 alpha:1];
     alertView.layer.masksToBounds = YES;
     alertView.layer.cornerRadius = 10.0;
     [self.view addSubview:alertView];
     
-    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, width-10, 30)];
+    UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 10, width-10, 0)];
     headerLabel.numberOfLines = 1;
     headerLabel.backgroundColor = [UIColor clearColor];
     headerLabel.text = _headerLabelText;
@@ -68,18 +68,18 @@
     [alertView addSubview:headerLabel];
     
     
-    UILabel *descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 30, width-10, 60)];
+    UILabel *descriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, width-10, 100)];
     descriptionLabel.numberOfLines = 2;
     descriptionLabel.backgroundColor = [UIColor clearColor];
     descriptionLabel.text = _descriptionLabelText;
-    descriptionLabel.font = [UIFont systemFontOfSize:14];
+    descriptionLabel.font = [UIFont systemFontOfSize:16];
     descriptionLabel.textAlignment = NSTextAlignmentCenter;
     [alertView addSubview:descriptionLabel];
     
 
     float starWeight = 30.0;
     float starHeight = 30.0;
-    float starY = 85.0;
+    float starY = 110.0;
     float separatorWidth = 5.0;
     
     _star1 = [UIButton buttonWithType:UIButtonTypeCustom];
